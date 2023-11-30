@@ -3,7 +3,7 @@
 cd demo
 make clean
 echo "正在编译..."
-sudo docker run -d --rm -v "$(pwd)":/root -w /root miyoo_sdk make
+sudo docker run -it --rm -v "$(pwd)":/root -w /root miyoo_sdk make
 
 # 获取上一个命令的退出状态
 if [ $? -eq 0 ]; then
