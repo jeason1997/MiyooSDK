@@ -1,3 +1,7 @@
+/*
+ * 一个SDL彩虹刷屏程序
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
