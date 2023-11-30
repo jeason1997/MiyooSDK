@@ -10,11 +10,11 @@ Miyoo is a handheld retro game emulator. It supports a variety of classic game e
 Make sure you have [Docker](https://www.docker.com/) installed. Just init the environment with precompiled toolchain:
 
 ``` bash
-chmod +x install.sh run.sh
+sudo chmod +x install.sh run.sh
 # Download miyoo sdk and create docker image
-./install.sh
+sudo ./install.sh
 # Run miyoo docker container and complite demo script
-./run.sh
+sudo ./run.sh
 ```
 
 Then we have the `miyoo_sdk` docker image ready. We can try out the toolchain in terminal now:
@@ -29,7 +29,7 @@ Build demo app:
 cd demo
 
 # Run make inside container
-docker run -it --rm -v "$(pwd)":/root -w /root miyoo_sdk make
+docker run -d --rm -v "$(pwd)":/root -w /root miyoo_sdk make
 ```
 
 This should compile the `demo/demo.out` output, just copy this file to SD card, and start it from the App Installer on Miyoo. For a standalone icon entry, checkout the [GMenu2X](https://mtorromeo.github.io/gmenu2x/documentation/) documentation about using links.

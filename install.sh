@@ -11,8 +11,8 @@ fi
 
 # 拉取debian
 echo "正在拉取debian..."
-docker pull debian:latest
+sudo docker pull debian:latest
 
 # 基于docker12创建miyoo_sdk镜像
 echo "正在创建miyoo_sdk..."
-docker build -t miyoo_sdk .
+sudo docker build -t miyoo_sdk .
